@@ -1,0 +1,638 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Drama Cast | دراما كاست</title>
+
+<meta name="description" content="Drama Cast | دراما كاست — Turkish drama recaps, stories and entertainment.">
+<meta name="theme-color" content="#0b0b0f">
+
+<style>
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background: #0b0b0f;
+    color: #f5f5f5;
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.container {
+    width: min(1100px, calc(100% - 40px));
+    margin: auto;
+}
+
+/* HEADER */
+
+header {
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+    background: rgba(11,11,15,0.96);
+}
+
+.navbar {
+    min-height: 78px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo-area {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.logo {
+    width: 44px;
+    height: 44px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #17171f;
+    border: 1px solid #c99b4a;
+    color: #e8bd70;
+    font-weight: bold;
+}
+
+.brand {
+    font-size: 17px;
+    font-weight: bold;
+}
+
+.brand-ar {
+    display: block;
+    color: #9999a4;
+    font-size: 12px;
+    margin-top: -2px;
+}
+
+.nav-links {
+    display: flex;
+    gap: 24px;
+    color: #a5a5af;
+    font-size: 14px;
+}
+
+.nav-links a:hover {
+    color: #ffffff;
+}
+
+/* HERO */
+
+.hero {
+    text-align: center;
+    padding: 105px 20px 95px;
+    background:
+        radial-gradient(
+            circle at 50% 0%,
+            rgba(201,155,74,0.16),
+            transparent 42%
+        );
+}
+
+.badge {
+    display: inline-block;
+    padding: 7px 14px;
+    border-radius: 30px;
+    border: 1px solid rgba(201,155,74,0.35);
+    color: #e8bd70;
+    font-size: 12px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+}
+
+.hero h1 {
+    max-width: 850px;
+    margin: 22px auto 18px;
+    font-size: clamp(42px, 7vw, 76px);
+    line-height: 1.03;
+    letter-spacing: -3px;
+}
+
+.hero p {
+    max-width: 650px;
+    margin: auto;
+    color: #a7a7b2;
+    font-size: 18px;
+}
+
+.buttons {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.button {
+    padding: 13px 21px;
+    border-radius: 10px;
+    border: 1px solid rgba(255,255,255,0.1);
+    background: #15151d;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.button.primary {
+    background: #d9ad5d;
+    color: #15120b;
+    border-color: #d9ad5d;
+}
+
+.button:hover {
+    transform: translateY(-2px);
+}
+
+/* SECTIONS */
+
+section {
+    padding: 75px 0;
+}
+
+.section-title {
+    margin-bottom: 30px;
+}
+
+.section-title h2 {
+    margin: 0 0 7px;
+    font-size: 30px;
+}
+
+.section-title p {
+    margin: 0;
+    color: #9999a4;
+}
+
+/* CHANNELS */
+
+.channels {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 14px;
+}
+
+.channel {
+    min-height: 160px;
+    padding: 22px;
+    border-radius: 16px;
+    background: #121219;
+    border: 1px solid rgba(255,255,255,0.08);
+    transition: 0.2s;
+}
+
+.channel:hover {
+    transform: translateY(-4px);
+    border-color: rgba(217,173,93,0.45);
+}
+
+.channel-icon {
+    font-size: 23px;
+    margin-bottom: 25px;
+}
+
+.channel h3 {
+    margin: 0 0 4px;
+    font-size: 16px;
+}
+
+.channel p {
+    margin: 0;
+    color: #9999a4;
+    font-size: 13px;
+}
+
+.channel-arrow {
+    color: #d9ad5d;
+    margin-top: 15px;
+}
+
+/* ABOUT */
+
+.about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.about-box {
+    background: #121219;
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 18px;
+    padding: 32px;
+}
+
+.about-box h2 {
+    margin-top: 0;
+    font-size: 27px;
+}
+
+.about-box p {
+    color: #a5a5af;
+}
+
+.tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 22px;
+}
+
+.tag {
+    padding: 7px 11px;
+    background: #1a1a23;
+    border-radius: 20px;
+    color: #d3d3da;
+    font-size: 12px;
+}
+
+/* BUSINESS */
+
+.business {
+    text-align: center;
+    padding: 60px 25px;
+    border-radius: 22px;
+    background:
+        linear-gradient(
+            145deg,
+            rgba(217,173,93,0.09),
+            #121219
+        );
+    border: 1px solid rgba(217,173,93,0.22);
+}
+
+.business h2 {
+    margin: 0 0 10px;
+    font-size: 30px;
+}
+
+.business p {
+    max-width: 650px;
+    margin: 0 auto 25px;
+    color: #a5a5af;
+}
+
+/* FOOTER */
+
+footer {
+    border-top: 1px solid rgba(255,255,255,0.08);
+    padding: 30px 0;
+    color: #888893;
+    font-size: 12px;
+}
+
+.footer {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.footer strong {
+    color: #f2f2f2;
+}
+
+/* MOBILE */
+
+@media (max-width: 900px) {
+
+    .channels {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .about-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .nav-links {
+        display: none;
+    }
+}
+
+@media (max-width: 560px) {
+
+    .container {
+        width: calc(100% - 28px);
+    }
+
+    .hero {
+        padding: 75px 10px 65px;
+    }
+
+    .hero h1 {
+        font-size: 43px;
+        letter-spacing: -1.8px;
+    }
+
+    .hero p {
+        font-size: 16px;
+    }
+
+    section {
+        padding: 55px 0;
+    }
+
+    .channels {
+        grid-template-columns: 1fr;
+    }
+
+    .about-box {
+        padding: 24px;
+    }
+
+    .footer {
+        flex-direction: column;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <div class="container navbar">
+
+        <a href="#" class="logo-area">
+
+            <div class="logo">DC</div>
+
+            <div class="brand">
+                Drama Cast
+                <span class="brand-ar">دراما كاست</span>
+            </div>
+
+        </a>
+
+        <nav class="nav-links">
+            <a href="#channels">Channels</a>
+            <a href="#about">About</a>
+            <a href="#business">Business</a>
+        </nav>
+
+    </div>
+</header>
+
+
+<main>
+
+<!-- HERO -->
+
+<section class="hero">
+
+    <span class="badge">Official Drama Cast</span>
+
+    <h1>
+        Turkish Drama Recaps
+        & Entertainment
+    </h1>
+
+    <p>
+        Stories, twists, characters and unforgettable moments
+        from the world of Turkish dramas.
+    </p>
+
+    <div class="buttons">
+
+        <a
+            class="button primary"
+            href="https://www.youtube.com/@DramaCastTV"
+            target="_blank"
+        >
+            Watch on YouTube
+        </a>
+
+        <a class="button" href="#channels">
+            Follow Drama Cast
+        </a>
+
+    </div>
+
+</section>
+
+
+<!-- CHANNELS -->
+
+<section id="channels">
+
+    <div class="container">
+
+        <div class="section-title">
+
+            <h2>Follow Drama Cast</h2>
+
+            <p>
+                Connect with our official social channels.
+            </p>
+
+        </div>
+
+
+        <div class="channels">
+
+            <a
+                class="channel"
+                href="https://www.youtube.com/@DramaCastTV"
+                target="_blank"
+            >
+
+                <div class="channel-icon">▶</div>
+
+                <h3>YouTube</h3>
+
+                <p>Full recaps & analysis</p>
+
+                <div class="channel-arrow">↗</div>
+
+            </a>
+
+
+            <a class="channel" href="#">
+
+                <div class="channel-icon">f</div>
+
+                <h3>Facebook</h3>
+
+                <p>Drama updates & reels</p>
+
+                <div class="channel-arrow">↗</div>
+
+            </a>
+
+
+            <a class="channel" href="#">
+
+                <div class="channel-icon">◎</div>
+
+                <h3>Instagram</h3>
+
+                <p>Reels & stories</p>
+
+                <div class="channel-arrow">↗</div>
+
+            </a>
+
+
+            <a class="channel" href="#">
+
+                <div class="channel-icon">♪</div>
+
+                <h3>TikTok</h3>
+
+                <p>Short drama stories</p>
+
+                <div class="channel-arrow">↗</div>
+
+            </a>
+
+
+            <a class="channel" href="#">
+
+                <div class="channel-icon">✈</div>
+
+                <h3>Telegram</h3>
+
+                <p>Updates & YouTube recaps</p>
+
+                <div class="channel-arrow">↗</div>
+
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ABOUT -->
+
+<section id="about">
+
+    <div class="container">
+
+        <div class="about-grid">
+
+
+            <div class="about-box">
+
+                <h2>About Drama Cast</h2>
+
+                <p>
+                    Drama Cast is a digital entertainment brand
+                    focused on Turkish dramas, episode recaps,
+                    story highlights, character moments and
+                    engaging drama content.
+                </p>
+
+                <div class="tags">
+
+                    <span class="tag">Turkish Dramas</span>
+                    <span class="tag">Episode Recaps</span>
+                    <span class="tag">Story Highlights</span>
+                    <span class="tag">Entertainment</span>
+
+                </div>
+
+            </div>
+
+
+            <div class="about-box">
+
+                <h2>Official Identity</h2>
+
+                <p>
+                    The official identity of Drama Cast is
+                    <strong>@DramaCastTV</strong>.
+                    Follow our verified social channels
+                    to stay connected with the brand.
+                </p>
+
+                <div class="tags">
+
+                    <span class="tag">
+                        Drama Cast | دراما كاست
+                    </span>
+
+                    <span class="tag">
+                        @DramaCastTV
+                    </span>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- BUSINESS -->
+
+<section id="business">
+
+    <div class="container">
+
+        <div class="business">
+
+            <h2>Business & Advertising</h2>
+
+            <p>
+                Interested in advertising, partnerships or
+                business opportunities with Drama Cast?
+                Contact us through our official channels.
+            </p>
+
+            <a
+                class="button primary"
+                href="https://www.youtube.com/@DramaCastTV"
+                target="_blank"
+            >
+                Contact Drama Cast
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+</main>
+
+
+<footer>
+
+    <div class="container footer">
+
+        <div>
+            <strong>Drama Cast | دراما كاست</strong>
+        </div>
+
+        <div>
+            © 2026 Drama Cast. All rights reserved.
+        </div>
+
+        <div>
+            @DramaCastTV
+        </div>
+
+    </div>
+
+</footer>
+
+</body>
+</html>
